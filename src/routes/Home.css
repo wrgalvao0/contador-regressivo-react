@@ -1,0 +1,25 @@
+#container-geral {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(49, 48, 48);
+}
+#container-conteudo{
+    padding: 40px;
+    background-color: #cccccc;
+    border-radius: 20px;
+}
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input {
+    margin-bottom: 10px;
+}
