@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, Router } from 'react-router-dom'
 import Home from './routes/Home.jsx'
 import Contador from './routes/Contador.jsx'
+import { DataProvider } from './context/DataContext.jsx'
 import './index.css'
 import App from './App.jsx'
 
@@ -24,6 +25,8 @@ let rota = createBrowserRouter([
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={rota}/>
+    <DataProvider>
+      <RouterProvider router={rota}/>
+    </DataProvider>
   </StrictMode>,
 )
