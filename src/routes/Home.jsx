@@ -6,20 +6,24 @@ import './Home.css'
 
 const Home = () => {
   
-  let { data, setData } = useContext(DataContext)
+  let { data, setData, titulo, setTitulo } = useContext(DataContext)
+  
 
   function handleDateChange(event) {
-    event.preventDefault()
+    
     setData(event.target.value)
   }
+  function handleTituloChange(event) {
 
+    setTitulo(event.target.value)
+  }
   return (
     <div id='container-geral'>
       <div id='container-conteudo'>
         <h1>Monte sua contagem regressiva!</h1>
         <form>
           <label htmlFor="titulo">Titulo:</label>
-          <input type="text" id='titulo' required placeholder='Digite o titulo do evento' />
+          <input type="text" id='titulo' required placeholder='Digite o titulo do evento' value={titulo} onChange={handleTituloChange} />
           <label htmlFor="data">Data do evento:</label>
           <input type="date" id='data' placeholder='dd/mm/yyyy' value={data} onChange={handleDateChange} />
           <label htmlFor="imagem">Imagem:</label>
