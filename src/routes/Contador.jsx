@@ -47,11 +47,33 @@ const Contador = () => {
   return (
     <div id='container-geral'>
       <div id='container-conteudo'>
-        <h1>{titulo}</h1>
-        <input className='inputs-contador' type="number" id='dias' value={dias} readOnly />
-        <input className='inputs-contador' type="number" id='horas' value={horas} readOnly />
-        <input className='inputs-contador' type="number" id='minutos' value={minutos} readOnly />
-        <input className='inputs-contador' type="number" id='segundos' value={segundos} readOnly />
+        <h1 id='titulo-contador'>{titulo}</h1>
+        <div id='container-contadores'>
+          
+            <div className='container-contador'>
+              <span className='contador' readOnly>{dias}</span>
+              <span className='legenda'>Dias</span>
+            </div>
+        
+         
+            <div className='container-contador'>
+              <span className='contador' readOnly>{horas}</span>
+              <span className='legenda'>Horas</span>
+            </div>
+       
+        
+            <div className='container-contador'>
+              <span className='contador' readOnly>{minutos}</span>
+              <span className='legenda'>Minutos</span>
+            </div>
+        
+       
+            <div className='container-contador'>
+              <span className='contador' readOnly>{segundos}</span>
+              <span className='legenda'>Segundos</span>
+            </div>
+       
+        </div>
       </div>
     </div>
   )
